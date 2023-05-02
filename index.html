@@ -9,6 +9,15 @@
     <script src="script.js"></script>
 </head>
 <body>
-    
+    <div id="spam">
+        <div id="spamhead"></div>
+        <div class="x" onclick="spamdown('spam')">X</div>
+    </div>
+
+    <button onclick="spamup('spam')" >oh si</button>
+    <button onclick="spamdown('spam')" >oh no</button>
 </body>
+<script>
+    drag("spam");
+</script>
 </html>
