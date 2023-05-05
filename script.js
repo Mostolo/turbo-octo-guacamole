@@ -15,9 +15,7 @@ function drag(luigi) {
         pos4 = e.clientY;
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
-
-        let gay = document.getElementById("gay");
-        gay.innerHTML = pos3 + pos4;
+        ontop(luigi)
     }
     
     function closeDragElement() {
@@ -36,13 +34,82 @@ function drag(luigi) {
         mario.style.top = (mario.offsetTop - pos2) + "px";
         mario.style.left = (mario.offsetLeft - pos1) + "px";
     }
+
+    function ontop(wario) {
+        let y = Array.from(
+            document.getElementsByClassName("spam")
+        );
+    
+        for (const spam of y) {
+            spam.style.zIndex --
+        }
+    
+        let x = document.getElementById(wario)
+        x.style.zIndex = 0;
+    }
 } //Il santo graal di questo sito <3
 
 function spamup(spam) {
     let x = document.getElementById(spam)
     x.style.display = "block"
 }
-function spamdown(spam) {
-    let x = document.getElementById(spam);
-    x.style.display = "none";
+
+function spamallup() {
+    let x = Array.from(
+        document.getElementsByClassName("spam")
+    )
+
+    for (const spam of x) {
+        spam.style.display = "block"
+    }
+}
+
+function spamalldown() {
+    let x = Array.from(
+        document.getElementsByClassName("spam")
+    )
+
+    for (const spam of x) {
+        spam.style.display = "none"
+    }
+}
+
+function spamdown(e) {
+    let x = e.target.parentElement
+    x.style.display = "none"
+}
+
+function ranPos(e) {
+    let spammer = Array.from(
+        document.getElementsByClassName("spam")
+    );
+
+    for (const spam of spammer) {
+        let pageW = window.outerWidth
+        let rngX = rng(pageW)
+        let pageH = window.outerHeight
+        let rngY = rng(pageH)    
+        let w = spam.offsetWidth
+        let h = spam.offsetHeight
+        if (rngX + w >= pageW) {
+            let ranPX = rngX - w
+            spam.style.left = ranPX + "px"
+        } else {
+            let ranPX = rngX
+            spam.style.left = ranPX + "px"
+        }
+        if (rngY + h >= pageH) {
+            let ranPY = rngY - h
+            spam.style.top = ranPY + "px"
+        } else {
+            let ranPY = rngY
+            spam.style.top = ranPY + "px"
+        }
+    }
+}
+
+function rng(luigi) {
+    let x = Math.floor(Math.random() * luigi)
+    document.getElementById("spamhead").innerHTML = x
+    return(x)
 }
