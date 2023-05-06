@@ -26,7 +26,7 @@ body {
     width: 300px;
     aspect-ratio: 1;
     border: 5px solid rgb(82, 48, 5);
-    display: block;
+    display: none;
 }
 
 .spamhead {
@@ -42,4 +42,64 @@ body {
     position: absolute;
     right: 0px;
     bottom: 0px;
+}
+
+#starterDiv {
+    background-color: aliceblue;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 1px solid;
+    animation: Rainbow 500ms infinite;
+}
+
+#start {
+    border: 1px solid;
+    animation: Rainbow 500ms infinite;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 2px 4px #666;
+}
+
+#start:active {
+    cursor: grabbing;
+    background-color: rgb(207, 207, 207);
+    box-shadow: 1px 2px #999;
+    transform: translateY(3px);
+}
+
+
+
+@keyframes Rainbow {
+    0% {border-color: rgb(247,65,119);
+        color: rgb(247,65,119);}
+    14% {border-color: red;
+        color: red;}
+    21.5% {border-color: rgb(255,83,0);
+        color: rgb(255,83,0);}
+    29% {border-color: orange;
+        color: orange;}
+    36% {border-color: rgb(255,210,0);
+        color: rgb(255,210,0);}
+    43% {border-color: yellow;
+        color: yellow;}
+    50% {border-color: rgb(128,192,0);
+        color: rgb(128,192,0);}
+    57% {border-color: green;
+        color: green;}
+    64% {border-color: rgb(0,64,128);
+        color: rgb(0,64,128);}
+    71% {border-color: blue;
+        color: blue;}
+    78.5% {border-color: rgb(0,64,128);
+        color: rgb(0,64,128);}
+    86% {border-color: indigo;
+        color: indigo;}
+    93% {border-color: rgb(157,65,184);
+        color: rgb(157,65,184);}
+    100% {border-color: violet;
+        color: violet;}
 }

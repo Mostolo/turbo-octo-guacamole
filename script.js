@@ -49,9 +49,20 @@ function drag(luigi) {
     }
 } //Il santo graal di questo sito <3
 
+function startfunc() {
+    spamallup()
+    ranPos()
+    spamDown("starterDiv")
+}
+
 function spamup(spam) {
     let x = document.getElementById(spam)
     x.style.display = "block"
+}
+
+function spamDown(spam) {
+    let x = document.getElementById(spam)
+    x.style.display = "none"
 }
 
 function spamallup() {
@@ -74,7 +85,7 @@ function spamalldown() {
     }
 }
 
-function spamdown(e) {
+function spamParentDown(e) {
     let x = e.target.parentElement
     x.style.display = "none"
 }
