@@ -50,6 +50,7 @@ function drag(luigi) {
 } //Il santo graal di questo sito <3
 
 function startfunc() {
+    let person = prompt("How can i call you?", "Please, write your name here!")
     spamallup()
     ranPos()
     spamDown("starterDiv")

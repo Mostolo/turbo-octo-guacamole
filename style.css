@@ -71,8 +71,6 @@ body {
     transform: translateY(3px);
 }
 
-
-
 @keyframes Rainbow {
     0% {border-color: rgb(247,65,119);
         color: rgb(247,65,119);}
@@ -102,4 +100,29 @@ body {
         color: rgb(157,65,184);}
     100% {border-color: violet;
         color: violet;}
+}
+
+/* qui ci sono tutti gli spam */
+
+#spam1 {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    border: 1px solid black;
+    aspect-ratio: 100/80;
+    #spam1head {
+        background-color: #666;
+        color: #cccccc;
+    }
+    #spam1int {
+        height: 220px;
+        position: inherit;
+        top: 20px;
+        text-align: center;
+        font-family: "comic sans ms";
+        font-size: x-large;
+        
+    }
+}
+
+#spam2 {
+    background: linear-gradient(10deg, rgb(176, 255, 86) 0%, rgb(255, 208, 105) 100%);
 }
